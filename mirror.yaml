@@ -1,0 +1,22 @@
+version: 0.1
+log:
+  level: debug
+  formatter: text
+storage:
+  filesystem:
+    rootdirectory: /data/registry
+    maxthreads: 100
+  delete:
+    enabled: true
+  maintenance:
+   enabled: true
+   age: 5h
+   interval: 24h
+   dryrun: false
+http:
+  addr: 0.0.0.0:5000
+  debug:
+    addr: localhost:5001
+proxy:
+  remoteurl: https://registry-1.docker.io
+
